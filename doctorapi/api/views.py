@@ -18,3 +18,16 @@ class OrderViewSet(viewsets.ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
+
+class CreateOrderViewSet(viewsets.ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = CreateOrderSerializer
+
+
+class CreateUserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = CreateUserSerializer
+
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
